@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="max-w-lg mt-16 mx-10">
+    <h1 class="text-gray-900 text-lg title-font font-medium mb-3">Logged out</h1>
+    <p>Thanks for spending some quality time with the Website today.</p>
+    <div class="mt-5 py-5 border-t border-gray-200">
+        <a class="hover:text-blue-500" href="{% url 'accounts:login' %}">
+            Log In
+        </a>
+    </div>
+</div>
+{% endblock content %}

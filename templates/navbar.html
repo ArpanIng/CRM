@@ -1,0 +1,31 @@
+{% load static %}
+
+<header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <a href="{% url 'homepage' %}" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <img src="{% static 'images/logo.svg' %}" alt="logo">
+            <span class="ml-3 text-xl">CRM</span>
+        </a>
+        <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            {% if request.user.is_authenticated %}
+                {% if request.user.is_organisor %}
+                <a href="{% url 'agents:agent_list' %}" class="mr-5 hover:text-gray-900">Agents</a>
+                {% endif %}
+            <a href="{% url 'leads:lead_list' %}" class="mr-5 hover:text-gray-900">Leads</a>
+            <a href="{% url 'categorys:category_list' %}" class="mr-5 hover:text-gray-900">Category</a>
+            {% else %}
+            <a href="{% url 'accounts:signup' %}" class="mr-5 hover:text-gray-900">Sign Up</a>
+            {% endif %}
+        </nav>
+        {% if user.is_authenticated %}
+        Logged in as: {{ user.username }}
+        <a href="{% url 'accounts:logout' %}" class="ml-3 inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+            Logout
+        </a>
+        {% else %}
+        <a href="{% url 'accounts:login' %}" class="ml-3 inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+            Login
+        </a>
+        {% endif %}
+    </div>
+</header>

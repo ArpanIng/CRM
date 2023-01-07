@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="max-w-lg mx-auto">
+    <div class="py-5 border-gray-200">
+        <form class="mt-5" action="" method="post">
+            {% csrf_token %}
+            <p>Are you sure you want to delete "{{ lead }}"?</p>
+            <button class="w-full text-white bg-blue-500 hover:bg-blue-600 px-3 py-2 rounded-md" type="submit">
+                Delete
+            </button>
+        </form>
+        <div class="py-5">
+            <a class="hover:text-blue-500 underline" href="{% url 'leads:lead_detail' lead.pk %}">Cancel</a>
+        </div>
+    </div>
+</div>
+    
+{% endblock content %}
