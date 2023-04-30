@@ -9,22 +9,8 @@ To run this project you will need to set your environment variables.
 
 ## List of third-party packages used are:
 
-<ul>
-    <li>
-        <a href="https://pypi.org/project/black/">black</a>
-        </li>
-    <li>
-        <a href="https://pypi.org/project/crispy-tailwind/">crispy-tailwind</a>
-    </li>
-    <li>
-        <a href="https://pypi.org/project/django-environ/">django-environ</a>
-    </li>
-    <li>
-        <a href="https://pypi.org/project/mysqlclient/">mysqlclient</a>
-    </li>
-    <li>
-        <a href="https://pypi.org/project/whitenoise/">whitenoise</a>
-    </li>
-</ul>
-
-This project is from [JustDjango](https://www.youtube.com/watch?v=fOukA4Qh9QA) youtube channel.
+- `black`
+- `crispy-tailwind`
+- `django-environ`
+- `mysqlclient`
+- `whitenoise`
