@@ -30,15 +30,14 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
-    # whitenoise
-    "whitenoise.runserver_nostatic",
+    "whitenoise.runserver_nostatic",  # whitenoise
     "django.contrib.staticfiles",
     # local apps
     "leads.apps.LeadsConfig",
     "accounts.apps.AccountsConfig",
     "agents.apps.AgentsConfig",
     "categorys.apps.CategorysConfig",
-    # third-party apps
+    # third-party packages
     "crispy_forms",
     "crispy_tailwind",
 ]
